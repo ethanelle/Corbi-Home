@@ -1,5 +1,5 @@
 # Corbi Home
-@ethanelle, @jsanch49, @sid-singh
+[@ethanelle](https://github.com/ethanelle), [@jsanch49](https://github.com/jsanch49), [@sid-singh](https://github.com/sid-singh)
 ### A brief overview of the project
 Corbi Home is a home security app that connects facial recognition with motion tracking in your home. The system composes of a Raspberry Pi, multiple NodeMCUs, and a mobile app. When an intruder is detected by the initial camera, the motion sensors awaken and track movement throughout your home, alerting you of where the intruder currently stands.
 ### Contents
