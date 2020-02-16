@@ -1,13 +1,13 @@
 # Corbi Home
-@ethanelle, @jsanch49, @sid-singh
+[@ethanelle](https://github.com/ethanelle), [@jsanch49](https://github.com/jsanch49), [@sid-singh](https://github.com/sid-singh)
 ### A brief overview of the project
 Corbi Home is a home security app that connects facial recognition with motion tracking in your home. The system composes of a Raspberry Pi, multiple NodeMCUs, and a mobile app. When an intruder is detected by the initial camera, the motion sensors awaken and track movement throughout your home, alerting you of where the intruder currently stands.
 ### Contents
-* [Setup and Running Programs](https://github.com/ethanelle/iot-project#setup-and-running-programs)
-* [Android application](https://github.com/ethanelle/iot-project#android-app)
-* [Raspberry Pi and camera](https://github.com/ethanelle/iot-project#raspberry-pi)
-* [NodeMCUs and motion sensors](https://github.com/ethanelle/iot-project#nodemcus)
-* [Web server](https://github.com/ethanelle/iot-project#web-server)
+* [Setup and Running Programs](https://github.com/ethanelle/corbi-home#setup-and-running-programs)
+* [Android application](https://github.com/ethanelle/corbi-home#android-app)
+* [Raspberry Pi and camera](https://github.com/ethanelle/corbi-home#raspberry-pi)
+* [NodeMCUs and motion sensors](https://github.com/ethanelle/corbi-home#nodemcus)
+* [Web server](https://github.com/ethanelle/corbi-home#web-server)
 
 ## Setup and Running Programs
 ### Android App
@@ -15,7 +15,7 @@ The app was built with Android Studio. It can be run on an emulator or on a phon
 ### Face Detection
 This program was written completely in Python and made use of many Python libraries. Namely the modules, opencv-python and face_recognition, were used to detect faces with the frontal face classifier with the former module and perform object recognition with the latter module.
 
-Navigate to the working directory iot-project/raspberry/FaceDetection/ and type 'python3 FaceDetection.py'. This will start the demo code. The executable will wait to focus on a single face in the frame then take a picture of the person. It will begin another thread to concurrently do face recognition on the image it had just captured and continue looking for the next face in focus. After the evaluation of is the recently captured image a known person, the program will upload the image to an AWS bucket for viewing on the Android App. If it is a known person, this will print welcome home. Known images are registered by <name>.jpeg stored in iot-project/raspberry/FaceDetection/whitelist/.
+Navigate to the working directory corbi-home/raspberry/FaceDetection/ and type 'python3 FaceDetection.py'. This will start the demo code. The executable will wait to focus on a single face in the frame then take a picture of the person. It will begin another thread to concurrently do face recognition on the image it had just captured and continue looking for the next face in focus. After the evaluation of is the recently captured image a known person, the program will upload the image to an AWS bucket for viewing on the Android App. If it is a known person, this will print welcome home. Known images are registered by <name>.jpeg stored in corbi-home/raspberry/FaceDetection/whitelist/.
 
 ### Motion Sensors
 The code for the motions sensors was built with Arduino IDE. The 2 external libraries needed are the [ESP8266](https://github.com/esp8266/Arduino) library and the [PubSubClient](https://github.com/knolleary/pubsubclient) library.
