@@ -1,0 +1,23 @@
+{
+  "name": "webservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm webapp\" \"npm mosquitto\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webapp": "node index.js 1997 &",
+    "mosquitto": "node mqtt_logger.js &",
+    "stop": "pkill --signal SIGINT corbiWebApp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mqtt": "^3.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0"
+  }
+}

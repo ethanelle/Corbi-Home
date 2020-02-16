@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Corbi Home</string>
+    <string name="motion_list_HTTP_error">"An error occurred finding the motion list."</string>
+    <string name="camera_message_HTTP_error">"An error occurred finding the photos."</string>
+    <string name="welcome_tab">"Welcome"</string>
+    <string name="camera_tab">"Camera"</string>
+    <string name="motion_tab">"Motion Feed"</string>
+    <string name="welcome_body">"Welcome to the Corbi App"</string>
+    <string name="image_descriptor">"Camera image"</string>
+</resources>
